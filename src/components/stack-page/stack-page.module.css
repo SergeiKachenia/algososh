@@ -1,0 +1,20 @@
+.circleList {
+  list-style-type: none;
+  margin-top: 48px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.resetButton {
+  margin-left: 68px;
+}
+
+
+.form {
+  display: flex;
+  max-width: 830px;
+  gap: 12px;
+  margin: 0 auto;
+}
