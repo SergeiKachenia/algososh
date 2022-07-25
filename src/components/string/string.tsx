@@ -46,7 +46,7 @@ export const StringComponent: React.FC = () => {
 
   return (
     <SolutionLayout title="Строка">
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={(e: React.FormEvent<HTMLFormElement>) => e.preventDefault()}>
         <Input
           isLimitText={true}
           maxLength={11}
@@ -60,7 +60,7 @@ export const StringComponent: React.FC = () => {
           onClick={() => reverseString()}
           disabled={!inputString}
           isLoader={isLoading}
-          type="submit"
+          type="button"
         ></Button>
       </form>
       <ul className={styles.circle}>

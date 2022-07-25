@@ -2,9 +2,6 @@ import { swapElements } from "../../components/string/utils";
 import { ElementStates } from "../../types/element-states";
 import { columnObject } from "../../types/types";
 
-/*Указанные алгоритмы могут выдавать промежуточные результаты
-в зависимости от переданного в функцию шага - это делает возможным
-разделить функционал рендера UI и самих вычислений*/
 
 export const selectionSortAlgo = (
   mode: "ascending" | "descending",

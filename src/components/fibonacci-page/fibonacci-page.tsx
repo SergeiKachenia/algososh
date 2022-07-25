@@ -34,7 +34,7 @@ export const FibonacciPage: React.FC = () => {
 
   return (
     <SolutionLayout title="Последовательность Фибоначчи">
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={(e: React.FormEvent<HTMLFormElement>) => e.preventDefault()}>
         <Input
           placeholder="Введите число от 1 до 19"
           min={1}
@@ -44,13 +44,14 @@ export const FibonacciPage: React.FC = () => {
             setInputValue(Number(e.currentTarget.value.replace(/[^0-9]/g, "")))
           }
           isLimitText={true}
+          maxLength={2}
           max={19}
         />
         <Button
           disabled={inputValue ? inputValue > 19 : true}
           isLoader={isLoading}
           text="Развернуть"
-          type="submit"
+          type="button"
           onClick={() => inputValue && renderFib()}
         />
       </form>

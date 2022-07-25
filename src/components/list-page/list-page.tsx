@@ -245,7 +245,7 @@ export const ListPage: React.FC = () => {
   return (
     <SolutionLayout title="Связный список">
       <div className={styles.container}>
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={(e: React.FormEvent<HTMLFormElement>) => e.preventDefault()}>
           <Input
             extraClass={styles.input}
             placeholder="Введите значение"

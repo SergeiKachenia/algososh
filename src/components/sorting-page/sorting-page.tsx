@@ -74,7 +74,10 @@ export const SortingPage: React.FC = () => {
   return (
     <SolutionLayout title="Сортировка массива">
       <div className={styles.wrapContainer}>
-        <form className={styles.form}>
+        <form
+          className={styles.form}
+          onSubmit={(e: React.FormEvent<HTMLFormElement>) => e.preventDefault()}
+        >
           <div className={styles.radioContainer}>
             <RadioInput
               disabled={isLoading}
@@ -97,7 +100,7 @@ export const SortingPage: React.FC = () => {
               disabled={isLoading}
               isLoader={ascendingRunning}
               text="По возрастанию"
-              type="submit"
+              type="button"
               onClick={() =>
                 checked === "selection"
                   ? selectionSort("ascending")
@@ -109,7 +112,7 @@ export const SortingPage: React.FC = () => {
               disabled={isLoading}
               isLoader={descendingRunning}
               text="По убыванию"
-              type="submit"
+              type="button"
               onClick={() =>
                 checked === "selection"
                   ? selectionSort("descending")
