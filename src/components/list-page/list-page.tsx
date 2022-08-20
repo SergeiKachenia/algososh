@@ -247,6 +247,7 @@ export const ListPage: React.FC = () => {
       <div className={styles.container}>
         <form className={styles.form} onSubmit={(e: React.FormEvent<HTMLFormElement>) => e.preventDefault()}>
           <Input
+            name="value"
             extraClass={styles.input}
             placeholder="Введите значение"
             min={1}
@@ -292,6 +293,7 @@ export const ListPage: React.FC = () => {
         </form>
         <form className={styles.form}>
           <Input
+            name="index"
             type="text"
             extraClass={styles.input}
             placeholder="Введите индекс"
